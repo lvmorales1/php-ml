@@ -2,7 +2,7 @@
 This is a repository to study PHP ML
 
 ## Dependencies
-- [PHP](https://www.php.net/)
+- [PHP >=7](https://www.php.net/)
 - [Composer](https://getcomposer.org/)
 - [PHP ML](https://php-ml.readthedocs.io/en/latest/)
 
