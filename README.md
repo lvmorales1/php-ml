@@ -12,7 +12,7 @@ This is a repository to study PHP ML
 3. Run `php -S localhost:8000` to start the server
 
 ## Steps in to ML
-- [ ] Step 1: Loading the data
+- [X] Step 1: Loading the data
 - [ ] Step 2: Preprocessing data
 - [ ] Step 3: Training
 - [ ] Step 4: Evaluating machine Learning Models
