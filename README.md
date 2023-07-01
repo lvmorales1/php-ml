@@ -13,7 +13,7 @@ This is a repository to study PHP ML
 
 ## Steps in to ML
 - [X] Step 1: Loading the data
-- [ ] Step 2: Preprocessing data
+- [X] Step 2: Preprocessing data
 - [ ] Step 3: Training
 - [ ] Step 4: Evaluating machine Learning Models
 - [ ] Step 5: Making Predictios with traied models
