@@ -15,5 +15,5 @@ This is a repository to study PHP ML
 - [X] Step 1: Loading the data
 - [X] Step 2: Preprocessing data
 - [X] Step 3: Training
-- [ ] Step 4: Evaluating machine Learning Models
-- [ ] Step 5: Making Predictios with traied models
+- [X] Step 4: Evaluating machine Learning Models
+- [ ] Step 5: Making Predictios with trained models
