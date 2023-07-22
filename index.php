@@ -9,21 +9,21 @@ use Phpml\Regression\SVR;
 use Phpml\Metric\Accuracy;
 use Phpml\Classification\KNearestNeighbors;
 use Phpml\Clustering\KMeans;
+use Phpml\ModelManager;
 
 require "vendor/autoload.php";
 
 $data = new CsvDataset("data/iris.csv", 4, true);
 
-$clustering = new KMeans(3);
-$clusters = $clustering->cluster($data->getSamples());
+$dataSet = new StratifiedRandomSplit($data, 0.2, 156);
 
-$file = fopen("clustered_data.csv", "w");
-foreach($clusters as $key => $cluster) {
-    foreach($cluster as $data) {
-        $dataToWrite = [...$data, $key];
-        fputcsv($file, $dataToWrite);
-    }
-}
+// $classifier = new KNearestNeighbors(3);
+// $classifier->train($dataSet->getTrainSamples(), $dataSet->getTrainLabels());
 
-fclose($file);
+$modelManager = new ModelManager();
+$classifier = $modelManager->restoreFromFile('models/classifier');
 
+$predicted = $classifier->predict($dataSet->getTestSamples());
+
+$accuracy = Accuracy::score($dataSet->getTestLabels(), $predicted);
+echo "Accuracy: $accuracy\n";
